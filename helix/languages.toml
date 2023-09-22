@@ -1,0 +1,7 @@
+[[language]]
+name = "rust"
+comment-token = "//"
+
+[[language]]
+name = "jsx"
+formatter = { command = "prettier" , args = ["--stdin"] }

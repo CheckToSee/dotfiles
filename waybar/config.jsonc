@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "font-weight": "normal",
+    "gtk-layer-shell": "true",
+    "exclusive": true,
+    "passtrough": false,
+    "height": 10,
+    "modules-left": [
+        "custom/arch",
+        "wlr/workspaces"
+    ],
+    "modules-center": [ "hyprland/window"
+    ],
+    "modules-right": [
+        "custom/spotify",
+        // "cpu",
+        "tray",
+        "custom/weather",
+        "pulseaudio",
+        "clock"
+    ],
+    "custom/arch": {
+        "format":"  ",
+      "tooltip": false,
+      "on-click": "~/.config/rofi/launchers/type-6/launcher.sh"
+    },
+    "custom/weather": {
+      "format":"   {}",
+      "exec": "curl https://wttr.in/?format=%t",
+      "interval": 6000
+    },
+    "custom/spotify": {
+      "format": "  {} ",
+      "exec": "~/.config/waybar/scripts/spot",
+      "return-type": "json",
+      "on-click": "playerctl -p spotify play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous",
+      "exec-if": "pgrep spotify"
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+      "(.*) - Mozilla Firefox": "🌎 $1",
+      "(.*) - fish": "> [$1]"
+    }
+    },
+    "wlr/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}"
+    },
+    "tray": {
+        "icon-size": 13,
+        "tooltip": false,
+        "spacing": 10
+    },
+    "cpu": {
+      "interval": 10,
+      "format": "{}% ",
+      "max-length": 10
+    },
+    "pulseaudio": {
+      "format": "{icon}",
+      "format-muted": " 󰖁 ",
+      "format-icons": {
+        "default": ["  ", "  ", "  "]
+      },
+      "on-click": "pavucontrol &"
+    },
+    "clock": {
+      "format": "{:󰥔  %I:%M} ",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    }
+  }
+}

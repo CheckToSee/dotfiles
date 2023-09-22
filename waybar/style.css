@@ -1,0 +1,110 @@
+* {
+  font-family: Ubuntu Nerd Font;
+  font-weight: normal;
+  font-size: 12px;
+  min-height: 0;
+  color: #cdd6f4;
+}
+#window,
+#clock,
+#tray,
+#workspaces,
+#pulseaudio,
+#custom-spotify,
+#custom-weather,
+#custom-arch {
+  background-color:  #1e1e2e;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 3px;
+}
+#tray {
+border: 2px solid #9999CC
+}
+#custom-arch {
+border-left: 2px solid #9999CC ;
+border-top: 2px solid #9999CC ;
+border-bottom: 2px solid #9999CC
+}
+#custom-weather{
+border-top: 2px solid #9999CC ;
+border-bottom: 2px solid #9999CC;
+border-left: 2px solid #9999CC;
+border-radius: 10px 0px 0px 10px;
+color: #e5ed00;
+font-weight: bold;
+}
+#workspaces {
+border-right: 2px solid #9999CC ;
+border-top: 2px solid #9999CC ;
+border-bottom: 2px solid #9999CC 
+}
+#window {
+border: 2px solid #9999CC ;
+}
+#clock {
+border-right: 2px solid #9999CC;
+border-top: 2px solid #9999CC;
+border-bottom: 2px solid #9999CC;
+color: #f5f5f5;
+}
+#pulseaudio {
+border-top: 2px solid #9999CC;
+border-bottom: 2px solid #9999CC;
+}
+#custom-spotify {
+border-top: 2px solid #9999CC;
+border-bottom: 2px solid #9999CC;
+border-left: 2px solid #9999CC;
+border-right: 2px solid #9999CC;
+margin-right: 5px;
+color: #00a81c;
+}
+#tray {
+  border-radius: 10px 10px 10px 10px;  
+  margin-right: 3px;
+}
+#clock,
+#workspaces {
+    border-radius: 0px 10px 10px 0px}
+#custom-arch {
+  margin-left: 3px;
+  border-radius: 10px 0px 0px 10px;
+}
+#clock {
+  font-weight: bold;
+  margin-right: 3px;
+}
+#window,
+#custom-spotify {
+font-weight: bold;
+border-radius: 10px 10px 10px 10px;
+padding-left: 5px;
+padding-right: 5px;
+}
+#workspaces button {
+  color: gray;
+  padding: 1px;
+}
+#workspaces button.active {
+  color: white;
+  border-radius: 5;
+  background: #966db5;
+}
+
+#workspaces button.focused {
+  color: black;
+}
+#window {
+  font-weight: bold;
+}
+button {
+  min-width: 16px;
+}
+window#waybar {
+  /* you can also GTK3 CSS functions! */
+  background-color: transparent;
+  border-radius: 10px 10px 10px 10px;
+  padding: 0;
+  margin: 0;
+}

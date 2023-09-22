@@ -1,0 +1,27 @@
+window:
+  padding:
+    x: 5
+    y: 5
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 0.5
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: JetBrains Mono Nerd Font
+    style: Regular
+  bold:
+    family: JetBrains Mono Nerd Font
+    style: Bold
+  italic:
+    family: JetBrains Mono Nerd Font
+    style: MediumItalic
+  bold_italic:
+    family: JetBrains Mono Nerd Font
+    style: BoldItalic
+  size: 14
