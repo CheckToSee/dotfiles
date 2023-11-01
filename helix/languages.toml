@@ -3,5 +3,66 @@ name = "rust"
 comment-token = "//"
 
 [[language]]
+name = "python"
+# scope = "source.python"
+# injection-regex = "python"
+# file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct"]
+# shebangs = ["python"]
+# roots = ["setup.py", "setup.cfg", "pyproject.toml"]
+comment-token = "#"
+# # language-servers = { command = "pyright-langserver", args = ["--stdio"] }
+# indent = { tab-width = 4, unit = "    " }
+# # will get "Async jobs timed out" errors if this empty config is not added
+# config = {}
+
+[[language]]
 name = "jsx"
-formatter = { command = "prettier" , args = ["--stdin"] }
+language-servers = [ "typescript-language-server", "tailwindcss-react"]
+grammar = "javascript"
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "tailwindcss-react"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server", "tailwindcss-react"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [ "typescript-language-server", "tailwindcss-react"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "html"
+formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
+language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-language-server"]
+
+[[language]]
+name = "css"
+formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+language-servers = [ "vscode-css-language-server", "tailwindcss-react"]
+
+[language-server.emmet-language-server]
+command="emmet-language-server"
+args = ["--stdio"]
+
+[language-server.tailwindcss-react]
+language-id = "typescriptreact"
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+config = {}
+
+[language-server.typescript-language-server.config]
+documentFormatting = false
+hostInfo = "helix"
+
+[language-server.typescript-language-server.config.completions]
+completeFunctionCalls = true
