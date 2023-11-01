@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 The dotfiles (desktop configuration files) for my Arch desktop config
 
 ## Preview
