@@ -4,11 +4,11 @@ The dotfiles (desktop configuration files) for my Arch desktop config
 ## Preview
 ![alt text](https://github.com/CheckToSee/dotfiles/blob/main/config_preview.png)
 
-## Hypr
-A flashy window manager used for general browsing. In use in preview photo.
+## Hyprland
+A flashy window manager used for general browsing. In use in preview photo. Some custom keybinds added customized to my liking.
 
 ## i3
-A minimalist window manager used for my dev workflow.
+A minimalist window manager used for my dev workflow. Keybinds added just like Hyprland.
 
 ## Alacritty
 Terminal emulator used. Some transparency added.
@@ -29,4 +29,4 @@ A cool Rofi menu I found on github, to quickly launch applications.
 Combined with Hypr to provide a lockscreen after inactivity, with the monitor sleeping after a certain time period.
 
 ## Waybar
-Bar used in preview
+Bar used in preview.
