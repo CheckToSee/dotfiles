@@ -42,8 +42,6 @@ local plugins = {
         "typescript",
         "tsx",
         "json",
-
-        -- Python!
         "python",
         "rust",
       },
@@ -80,6 +78,37 @@ local plugins = {
     lazy = false,
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {}
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    lazy = false,
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+  },
+  {
+    'stevearc/oil.nvim',
+    lazy = false,
+    opts = {},
+    -- Optional dependencies
+    -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    'ThePrimeagen/harpoon',
+    lazy = false,
+    branch = 'harpoon2',
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
 }
 return plugins
