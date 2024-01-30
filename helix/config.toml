@@ -10,9 +10,9 @@ left = ["mode", "spinner"]
 center = ["file-name"]
 right = ["file-encoding", "file-line-ending", "file-type",]
 separator = "|"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+mode.normal = "Normal"
+mode.insert = "Insert"
+mode.select = "Select"
 
 [editor.lsp]
 display-inlay-hints = true
@@ -28,12 +28,17 @@ C-v = ":vs"
 C-h = "jump_view_left"
 C-l = "jump_view_right"
 
+# insert mode using jk
+[keys.insert.j]
+k = "normal_mode"
+
 [keys.normal.space]
 x = ":bc"
 m = ":format"
 
 [keys.insert]
-"C-c" = "normal_mode"
+# "C-c" = "normal_mode"
+# Use the jk keybind instead it actually works :D 
 "C-h" = "move_char_left"
 "C-j" = "move_line_down"
 "C-k" = "move_line_up"
